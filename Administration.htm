@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<title>ADMINISTRATION</title>
+</head>
+
+<body bgcolor="#CCFFFF">
+<BR><BR>
+	<CENTER>
+	<H1> <u>NANDHINI SAREES</u> </H1>
+	</CENTER>
+	
+	<SCRIPT language="JavaScript">
+	function validate()
+	{
+		if(document.frm.name.value == "")
+		{
+			alert("You must enter the consumer name");
+			return;
+		}
+		if(document.frm.address.value == "")
+		{
+			alert("You must enter the address");
+			return;
+		}
+		if(document.frm.state.value == "Select")
+		{
+			alert("You must select the state");
+			return;
+		}
+		if(document.frm.pincode.value == "")
+		{
+			alert("You must enter the pincode");
+			return;
+		}
+		if(document.frm.gst.value == "")
+		{
+			alert("You must enter GSTIN of the consumer");
+			return;
+		}
+		document.frm.action="Addconsumer.jsp";
+		document.frm.submit();
+	}
+	
+	</SCRIPT>
+	
+	
+	<form name ="frm" method="POST">
+
+	<center><font size="5">New Consumer Addition</font></center>
+    	<BR><BR>
+	<table border="0" width="100%" height="100">
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right">Consumer Name</td>
+		<td width="51%" height="25"><input type="text" name="name" value=""></td>
+	</tr>
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right">Address</td>
+		<td width="51%" height="25"><input type="text" name="address" value=""></td>
+	</tr>
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right">State</td>
+		<td width="51%" height="25">
+			<select size="1" name="state">
+      			<option selected value="Select">Select State</option>
+				<option value="TAMILNADU">TAMILNADU</option>
+				<option value="KARNATAKA">KARNATAKA</option>
+				<option value="MAHARASHTRA">MAHARASHTRA</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right">Pin code</td>
+		<td width="51%" height="25"><input type="text" name="pincode" value=""></td>
+	</tr>
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right">GSTIN</td>
+		<td width="51%" height="25"><input type="text" name="gst" value=""></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td width="17%" align="right" height="25"></td>
+		<td width="32%" height="25" align="right"></td>
+		<td width="51%" height="25"><input type="button" value="    SUBMIT    " name="submission" onClick="validate();"></td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

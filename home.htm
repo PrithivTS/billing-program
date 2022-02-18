@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<title>HOME</title>
+</head>
+
+<body bgcolor="#CCFFFF">
+<BR><BR>
+	<CENTER>
+	<H1> <u>NANDHINI SAREES</u> </H1>
+	</CENTER>
+
+	<SCRIPT language="JavaScript">
+  
+  	function startSearch()
+  	{
+	 	if(document.frm.R1[0].checked)
+  		{
+			document.frm.action="Bill.jsp";
+			document.frm.submit();
+  		}
+    	
+		if(document.frm.R1[1].checked)
+  		{
+			document.frm.action="Purchase_Bill.jsp";
+			document.frm.submit();
+  		}
+		
+  		if(document.frm.R1[2].checked)
+  		{
+	  		document.frm.action="Old.jsp";
+			document.frm.submit();
+  		}	
+		
+		if(document.frm.R1[3].checked)
+  		{
+	  		document.frm.action="Purchase_Old.jsp";
+			document.frm.submit();
+  		}
+  	
+  		if(document.frm.R1[4].checked)
+  		{
+  			document.frm.action="Month.htm";
+			document.frm.submit();
+  		}
+		
+		if(document.frm.R1[5].checked)
+  		{
+  			document.frm.action="Purchase_Month.htm";
+			document.frm.submit();
+  		}
+		
+		if(document.frm.R1[6].checked)
+  		{
+  			document.frm.action="Administration.htm";
+			document.frm.submit();
+  		} 
+		
+		if(document.frm.R1[7].checked)
+  		{
+  			document.frm.action="Purchase_Administration.htm";
+			document.frm.submit();
+  		} 	
+ 	}
+
+  	</SCRIPT>
+  
+	<form name ="frm" method="POST">
+	
+    	<BR><BR>
+  
+  	<table border="0" width="100%" height="196">
+	<tr>
+	<td width="15%">&nbsp;</td>
+	<td width="15%">&nbsp;</td>
+	<td width="20%">&nbsp;</td>
+	<td width="15%">&nbsp;</td>
+	<td width="20%">&nbsp;</td>
+	<td width="15%">&nbsp;</td>
+	</td>
+	<tr>
+	<td></td>
+	<td colspan="2" align="center"><b>SALES INVOICE</b></td>
+	<td colspan="2" align="center"><b>PURCHASE INVOICE</b></td>
+	<td></td>
+	</tr>
+    	<tr>
+			<td></td>
+      		<td width="10%" align="right" height="25"><input type="radio" name="R1" checked value="Bill"></td>
+      		<td height="20">Sales Invoice</td>
+			<td width="10%" align="right" height="25"><input type="radio" name="R1" value="Purchase_Bill"></td>
+      		<td height="20">Purchase Invoice</td>
+			<td></td>
+      		
+    	</tr>
+    	<tr>
+			<td></td>
+    		<td align="right" height="25"><input type="radio" name="R1" value="Old"></td>
+      		<td height="20">Old Bills and Modification</td>
+			<td width="10%" align="right" height="25"><input type="radio" name="R1" value="Purchase_Old"></td>
+      		<td height="20">Old Bills and Modification</td>
+			<td></td>      		
+    	</tr>
+    	<tr>
+			<td></td>
+      		<td width="10%" align="right" height="25"><input type="radio" name="R1" value="Month"></td>
+      		<td height="20">Month chart preparation</td>
+			<td width="10%" align="right" height="25"><input type="radio" name="R1" value="Purchase_Month"></td>
+      		<td height="20">Month chart preparation</td>
+			<td></td>
+      		
+    	</tr>
+		    	<tr>
+				<td></td>
+      		<td width="10%" align="right" height="25"><input type="radio" name="R1" value="Administration"></td>
+      		<td height="20">Add New Consumer</td>
+      		<td align="right"><input type="radio" name="R1" value="Purchase_Administration"></td>
+			<td>Add New Party</td>
+			<td></td>
+    	</tr>
+    	<tr>      
+   	</tr>
+
+ 	</table>
+	<br><br>
+	<center><input type="button" value="    SUBMIT    " name="Submit" onClick="startSearch();"></center>
+ 
+	</form>
+
+</body>
+</html>

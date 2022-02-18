@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<title>Month chart preparation</title>
+</head>
+
+<body bgcolor="#CCFFFF">
+<BR><BR>
+	<CENTER>
+	<H1> <u>NANDHINI SAREES</u> </H1>
+	</CENTER>
+  
+	<form name ="frm" method="POST">
+	
+    	<BR><BR><BR><BR>
+  
+  	<table border="0" width="100%">
+
+    	<tr>
+			<td width="17%" align="right" height="25"></td>
+      		<td width="32%" align="right" height="25">Year for chart preparation</td>
+			<td width="51%" height="25">
+			<select size="1" name="year" id="year">
+				<option selected value="Select">Select Year</option>
+			</select>
+			</td>
+		</tr>
+		 	<tr>
+			<td width="17%" align="right" height="25"></td>
+      		<td width="32%" align="right" height="25">Month for chart preparation</td>
+			<td width="51%" height="25">
+			<select size="1" name="month">
+				<option selected value="Select">Select Month</option>
+				<option value="1">January</option>
+				<option value="2">February</option>
+				<option value="3">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">August</option>
+				<option value="9">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
+			</td>
+		</tr>
+	<tr>
+	<td>&nbsp;</td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td width="17%" align="right" ></td>
+		<td width="32%"  align="right"></td>
+		<td width="51%" ><input type="button" value="    SUBMIT    " name="submission" onClick="validate();"></td>
+	</tr>
+  	</table>
+ 
+	</form>
+	
+	<SCRIPT language="JavaScript">
+	var d = new Date();
+
+  	function validate()
+  	{
+		if(document.frm.year.value == "Select")
+		{
+			alert("You must select a year");
+			return;
+		}
+	 	if(document.frm.month.value == "Select")
+  		{
+			alert("You must select a month");
+			return;
+		}
+		
+		document.frm.action="Purchase_Month.jsp";
+		document.frm.submit();
+ 	}
+	
+	function fillvalues()
+	{
+		var select = document.getElementById('year');
+		for(var i=d.getFullYear();i>=2018;i--)
+		{
+			var opt = document.createElement('option');
+			opt.value = i;
+			opt.innerHTML = i;
+			select.add(opt);
+		}
+	}
+	window.fillvalues();
+  	</SCRIPT>
+</body>
+</html>
